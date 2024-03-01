@@ -1,0 +1,17 @@
+<!-- Post details page -->
+
+<h1><%= @entry["description"] %></h1>
+
+<ul>
+  <li><%= @entry["occurred_on"] %></li>
+</ul>
+
+<p><a href="/entries/<%= @entry["id"] %>/edit">Edit Post</a></p>
+
+<form action="/entries/<%= @entry["id"] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Post</button>
+</form>
+
+
+<p><a href="/places/<%= @place["id"] %>">Back to <%= @place["name"] %></a></p>
