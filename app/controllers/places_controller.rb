@@ -20,11 +20,10 @@ class PlacesController < ApplicationController
     @place = Place.new
     @place["name"] = params["name"]
     @place.save
-    redirect_to "/places"
 else
   flash["notice"] = "Login first."
 end
 redirect_to "/places"
-end
-end
 
+end
+end
